@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Dezire Stacked';
+    src: url('/src/font/Dezire\ Stacked.ttf');
+}
+
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+
+main::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-235deg, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 65%), no-repeat;
+}
+
+main .personagem{
+    display: none;
+    height: 100vh;
+}
+
+main .personagem video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(120%);
+}
+
+main .personagem.selecionado{
+    display: block;
+}
+
+main .personagem .imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(120%) ;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    background-color: #dcdcdc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+    color: #fff;
+}
+
+.conteudo .nome-personagem{
+    font-family: 'Dezire Stacked', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s;
+}
+
+.conteudo .descricao {
+    font-family: 'Rubik', sans-serif;
+    line-height: 24px;
+    animation: fadeInLeft 1.5s;
+}
+
+.conteudo .logo{
+    background: url(../imagens/logo-bibbia.png) center/cover;
+    width: 100px;
+    height: 100px;
+}
+
+.conteudo .instagram-embed{
+    color: #000;
+    padding-bottom: 50px;
+    width: 100px;
+    height: 100px;
+}
+   
+.botoes {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* padding: 10px; */
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .5s ease;
+}
+
+.botoes::after{
+    content: url(../imagens/svg/seta.svg);
+    position: absolute;
+    top: 0;
+    right: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 60px;
+    cursor: pointer;
+    filter: drop-shadow(0 5px 2px #000);
+    animation: movimento-lateral 1s alternate  infinite;
+}
+
+
+@keyframes movimento-lateral {
+    0%{
+        transform: translateX(-20%);
+    }
+
+    100%{
+        transform: translateX(30%);
+    }
+}
+
+.botoes:hover{
+    right: 0;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: none;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.botao:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px 1px rgb(253, 253, 253);
+}
+
+.botao img{
+    border-radius: 15%;
+    width: 80%;
+    height: 80%;
+}
+
+.botao.selecionado{
+    transform: scale(1.1);
+    animation: flashing 1s alternate  infinite;
+}
+
+@keyframes flashing {
+    0%{
+        box-shadow: 0px 0px 20px 1px rgb(253, 253, 253);
+    }
+
+    100%{
+        box-shadow: 0px 0px 5px 1px rgb(253, 253, 253);
+    }
+}

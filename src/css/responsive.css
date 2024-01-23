@@ -1,0 +1,111 @@
+@media (max-width: 769px) {
+    main::after {
+        background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
+        width: 100vw;
+    }
+
+    main .personagem .imagem {
+        height: 85%;
+    }
+
+    .conteudo {
+        justify-content: flex-end;
+        left: 0;
+        top: -20%;
+        max-width: 100vw;
+        padding: 30px;
+    }
+
+    .conteudo .nome-personagem {
+        font-size: 36px;
+    }
+
+    .conteudo .descricao {
+        max-width: 500px;
+    }
+
+    .botoes {
+        flex-flow: row wrap;
+        align-items: flex-end;
+        width: 100%;
+        top: 77%;
+        height: 180px;
+        right: 0;
+        padding: 30px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .botoes::after{
+        display: none;
+    }
+
+    .botoes .botao {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 425px) {
+    main::after {
+        background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
+        width: 100vw;
+    }
+
+    main .personagem .imagem {
+        height: 85%;
+    }
+
+    .conteudo .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .conteudo {
+        top: -25%;
+    }
+
+    .conteudo .nome-personagem {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .botoes {
+        padding: 20px;
+    }
+
+    .botoes .botao {
+        max-width: 55px;
+        max-height: 55px;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .conteudo {
+        top: 2%;
+        min-height: 250px;
+        justify-content: end;
+    }
+    
+        .conteudo .logo {
+            width: 130px;
+            height: 57px;
+        }
+
+    .conteudo .nome-personagem {
+        font-size: 30px;
+    }
+
+    .botoes .botao {
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    .botoes {
+        align-items: flex-end;
+        width: 100%;
+        height: 180px;
+        right: 0;
+        top: 58%;
+        padding: 30px;
+    }
+}
