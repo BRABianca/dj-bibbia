@@ -1,3 +1,4 @@
+/* Tamanho de tela até 769px */
 @media (max-width: 769px) {
     main::after {
         background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
@@ -37,7 +38,7 @@
         background-color: rgba(0, 0, 0, 0);
     }
 
-    .botoes::after{
+    .botoes::after {
         display: none;
     }
 
@@ -47,6 +48,7 @@
     }
 }
 
+/* Tamanho de tela até 425px */
 @media (max-width: 425px) {
     main::after {
         background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
@@ -81,17 +83,18 @@
     }
 }
 
+/* Tamanho de tela até 900px em orientação landscape */
 @media (max-width: 900px) and (orientation: landscape) {
     .conteudo {
         top: 2%;
         min-height: 250px;
         justify-content: end;
     }
-    
-        .conteudo .logo {
-            width: 130px;
-            height: 57px;
-        }
+
+    .conteudo .logo {
+        width: 130px;
+        height: 57px;
+    }
 
     .conteudo .nome-personagem {
         font-size: 30px;
