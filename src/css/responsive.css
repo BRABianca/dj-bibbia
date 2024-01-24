@@ -26,7 +26,7 @@
 
     .botoes {
         flex-flow: row wrap;
-        align-items: flex-end;
+        align-items: flex-start;
         width: 100%;
         top: 77%;
         height: 180px;
