@@ -98,6 +98,7 @@ a:hover {
    
 .botoes {
     position: fixed;
+    /* flex-flow: row wrap; */
     top: 0;
     right: -300px;
     width: 300px;
