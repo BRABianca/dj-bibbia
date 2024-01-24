@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Dezire Stacked';
-    src: url('/src/font/Dezire\ Stacked.ttf');
+    src: url('../font/Dezire\ Stacked.ttf');
 }
 
 body {
@@ -70,7 +70,7 @@ a:hover {
 }
 
 .conteudo .nome-personagem{
-    font-family: 'Dezire Stacked', sans-serif;
+    font-family: 'Dezire Stacked', Dezire Stacked;
     font-size: 48px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -84,7 +84,7 @@ a:hover {
 }
 
 .conteudo .logo{
-    background: url(../imagens/logo-bibbia.png) center/cover;
+    background: url(../img/logo-bibbia.png) center/cover;
     width: 100px;
     height: 100px;
 }
@@ -113,7 +113,7 @@ a:hover {
 }
 
 .botoes::after{
-    content: url(../imagens/svg/seta.svg);
+    content: url(../img/svg/seta.svg);
     position: absolute;
     top: 0;
     right: 100%;
