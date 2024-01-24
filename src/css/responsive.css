@@ -28,13 +28,13 @@
         flex-flow: row wrap;
         align-items: flex-start;
         width: 100%;
-        top: 77%;
+        top: 58%;
         height: 180px;
         right: 0;
         padding: 30px;
         background-color: rgba(0, 0, 0, 0);
     }
-
+    
     .botoes::after{
         display: none;
     }
@@ -74,8 +74,8 @@
     }
 
     .botoes .botao {
-        max-width: 55px;
-        max-height: 55px;
+        max-width: 50px;
+        max-height: 50px;
     }
 }
 
@@ -93,19 +93,5 @@
 
     .conteudo .nome-personagem {
         font-size: 30px;
-    }
-
-    .botoes .botao {
-        max-width: 55px;
-        max-height: 55px;
-    }
-
-    .botoes {
-        align-items: flex-end;
-        width: 100%;
-        height: 180px;
-        right: 0;
-        top: 58%;
-        padding: 30px;
     }
 }
