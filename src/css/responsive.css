@@ -26,7 +26,9 @@
 
     .botoes {
         flex-flow: row wrap;
-        align-items: flex-start;
+        align-items: flex-end;
+        justify-content: center;
+        display: flex;
         width: 100%;
         top: 58%;
         height: 180px;
@@ -34,7 +36,7 @@
         padding: 30px;
         background-color: rgba(0, 0, 0, 0);
     }
-    
+
     .botoes::after{
         display: none;
     }
