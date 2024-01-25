@@ -15,7 +15,7 @@
         top: -20%;
         max-width: 100vw;
         padding: 30px;
-        z-index: 1; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
+        z-index: 2; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
     }
 
     .conteudo .nome-personagem {
@@ -37,7 +37,7 @@
         right: 0;
         padding: 30px;
         background-color: rgba(0, 0, 0, 0);
-        z-index: 2; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
+        z-index: 1; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
     }
 
     .botoes::after {
@@ -93,7 +93,7 @@
         top: 2%;
         min-height: 250px;
         justify-content: end;
-        z-index: 1; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
+        z-index: 2; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
     }
 
     .conteudo .logo {
@@ -106,6 +106,6 @@
     }
 
     .botoes {
-        z-index: 2; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
+        z-index: 1; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
     }
 }
