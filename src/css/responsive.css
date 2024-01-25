@@ -68,7 +68,7 @@
 
     .conteudo {
         top: -25%;
-        z-index: 1; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
+        z-index: 2; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
     }
 
     .conteudo .nome-personagem {
@@ -78,7 +78,7 @@
 
     .botoes {
         padding: 20px;
-        z-index: 2; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
+        z-index: 1; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
     }
 
     .botoes .botao {
