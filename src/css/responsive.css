@@ -1,5 +1,9 @@
 /* Tamanho de tela até 769px */
 @media (max-width: 769px) {
+    body{
+        overflow: auto;
+    }
+
     main::after {
         background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
         width: 100vw;
@@ -24,6 +28,9 @@
 
     .conteudo .descricao {
         max-width: 500px;
+    }
+    .conteudo .instagram-embed {
+        width: -80%;
     }
 
     .botoes {
@@ -52,6 +59,10 @@
 
 /* Tamanho de tela até 425px */
 @media (max-width: 425px) {
+    body{
+        overflow: auto;
+    }
+    
     main::after {
         background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
         width: 100vw;
@@ -89,6 +100,9 @@
 
 /* Tamanho de tela até 900px em orientação landscape */
 @media (max-width: 900px) and (orientation: landscape) {
+    body{
+        overflow: auto;
+    }
     .conteudo {
         top: 2%;
         min-height: 250px;

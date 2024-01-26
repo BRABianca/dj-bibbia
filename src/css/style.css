@@ -90,10 +90,9 @@ a:hover {
 }
 
 .conteudo .instagram-embed{
-    color: #000;
-    padding-bottom: 50px;
-    width: 100px;
-    height: 100px;
+    /* color: #000;
+    padding-bottom: 50px; */
+    width: 50%;
 }
    
 .botoes {
@@ -112,6 +111,17 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.3);
     transition: .5s ease;
 }
+
+/* .botao-wpp {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.botao-wpp img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+} */
 
 .botoes::after{
     content: url(../img/svg/seta.svg);
