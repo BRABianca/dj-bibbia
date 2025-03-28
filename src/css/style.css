@@ -1,15 +1,17 @@
 @font-face {
     font-family: 'Dezire Stacked';
-    src: url('../font/Dezire\\ Stacked.ttf');
-}
-
-body {
+    src: url(/src/font/Dezire\ Stacked.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
     background-color: #000000;
     overflow: hidden;
     font-family: 'Rubik', sans-serif;
-}
-
-main::after {
+  }
+  
+  main::after {
     content: "";
     position: fixed;
     top: 0;
@@ -17,20 +19,24 @@ main::after {
     min-height: 100vh;
     width: 80vw;
     background: linear-gradient(-235deg, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 65%);
-}
-
-main .personagem {
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  main .personagem {
     display: none;
-    height: 100vh;
     position: relative;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-}
-
-main .personagem.selecionado {
+    z-index: 1;
+  }
+  
+  main .personagem.selecionado {
     display: block;
-}
-
-main .personagem video {
+  }
+  
+  main .personagem video {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,87 +45,92 @@ main .personagem video {
     object-fit: cover;
     filter: contrast(120%);
     z-index: 0;
-}
-
-main .personagem .imagem {
+  }
+  
+  main .personagem .imagem {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: contrast(120%);
-}
-
-a {
+    z-index: 0;
+  }
+  
+  a {
     color: black;
     text-decoration: none;
     background-color: #dcdcdc;
     padding: 2px 4px;
     border-radius: 4px;
-}
-
-a:hover {
+  }
+  
+  a:hover {
     text-decoration: underline;
-}
-
-.conteudo {
-    position: relative;
+  }
+  
+  .conteudo {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 60px 20px;
+    justify-content: flex-end;
     max-width: 600px;
     z-index: 2;
     color: #fff;
-    margin: 0 auto;
-    height: 100%;
-}
-
-.conteudo .nome-personagem {
+  }
+  
+  .conteudo .nome-personagem {
     font-family: 'Dezire Stacked', sans-serif;
     font-size: 48px;
     font-weight: 400;
     margin-bottom: 20px;
     animation: fadeInDown 1.5s;
-}
-
-.conteudo .descricao {
+    z-index: 3;
+  }
+  
+  .conteudo .descricao {
     line-height: 1.6;
     font-size: 18px;
     animation: fadeInLeft 1.5s;
-}
-
-.conteudo .logo {
+    z-index: 3;
+  }
+  
+  .conteudo .logo {
     background: url(../img/logo-bibbia.png) center/cover;
     width: 100px;
     height: 100px;
-}
-
-.conteudo .instagram-embed,
-.instagram-media {
+  }
+  
+  .instagram-media {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 auto !important;
-}
-
-/* Vídeo e iframe responsivos */
-.video-container {
+    z-index: 3;
+  }
+  
+  /* Vídeo e iframe responsivos */
+  .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
     height: 0;
     overflow: hidden;
+    z-index: 3;
     margin-top: 1rem;
-}
-
-.video-container iframe {
+  }
+  
+  .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-/* BOTOES */
-.botoes {
+    border: none;
+  }
+  
+  
+  /* BOTÕES */
+  .botoes {
     position: fixed;
     flex-direction: column;
     top: 0;
@@ -133,14 +144,14 @@ a:hover {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.3);
     transition: right 0.5s ease;
-    z-index: 999;
-}
-
-.botoes:hover {
+    z-index: 9999;
+  }
+  
+  .botoes:hover {
     right: 0;
-}
-
-.botoes::after {
+  }
+  
+  .botoes::after {
     content: url(../img/svg/seta.svg);
     position: absolute;
     top: 0;
@@ -153,9 +164,9 @@ a:hover {
     cursor: pointer;
     filter: drop-shadow(0 5px 2px #000);
     animation: movimento-lateral 1s alternate infinite;
-}
-
-.botao {
+  }
+  
+  .botao {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,65 +177,66 @@ a:hover {
     border-radius: 10%;
     cursor: pointer;
     transition: transform 0.3s ease;
-}
-
-.botao img {
+  }
+  
+  .botao img {
     border-radius: 15%;
     width: 80%;
     height: 80%;
-}
-
-.botao:hover {
+  }
+  
+  .botao:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 20px 1px rgb(253, 253, 253);
-}
-
-.botao.selecionado {
+  }
+  
+  .botao.selecionado {
     transform: scale(1.1);
     animation: flashing 1s alternate infinite;
-}
-
-/* Animações */
-@keyframes flashing {
+  }
+  
+  /* Animações */
+  @keyframes flashing {
     0% {
-        box-shadow: 0px 0px 20px 1px rgb(253, 253, 253);
+      box-shadow: 0px 0px 20px 1px rgb(253, 253, 253);
     }
     100% {
-        box-shadow: 0px 0px 5px 1px rgb(253, 253, 253);
+      box-shadow: 0px 0px 5px 1px rgb(253, 253, 253);
     }
-}
-
-@keyframes movimento-lateral {
+  }
+  
+  @keyframes movimento-lateral {
     0% {
-        transform: translateX(-20%);
+      transform: translateX(-20%);
     }
-
+  
     100% {
-        transform: translateX(30%);
+      transform: translateX(30%);
     }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
+  }
+  
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
     .conteudo {
-        padding: 40px 20px;
-        max-width: 100%;
+      padding: 40px 20px;
+      max-width: 100%;
     }
-
+  
     .conteudo .nome-personagem {
-        font-size: 32px;
+      font-size: 32px;
     }
-
+  
     .conteudo .descricao {
-        font-size: 16px;
+      font-size: 16px;
     }
-
+  
     .botao {
-        width: 60px;
-        height: 60px;
+      width: 60px;
+      height: 60px;
     }
-
+  
     .botoes {
-        gap: 12px;
+      gap: 12px;
     }
-}
+  }
+  

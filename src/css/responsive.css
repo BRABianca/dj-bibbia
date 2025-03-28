@@ -1,4 +1,4 @@
-/* ===== LANDSCAPE EM TABLETS E CELULARES GRANDES ===== */
+/* ===== PAISAGEM EM TABLETS/CELULARES GRANDES ===== */
 @media (max-width: 900px) and (orientation: landscape) {
     body {
       overflow: auto;
@@ -6,10 +6,9 @@
   
     .conteudo {
       top: 0;
-      min-height: 250px;
+      padding: 40px 20px;
       justify-content: flex-end;
       z-index: 2;
-      padding: 40px 20px;
     }
   
     .conteudo .nome-personagem {
@@ -21,14 +20,14 @@
     }
   }
   
-  /* ===== TABLETS EM GERAL ===== */
+  /* ===== TABLETS E DESKTOPS MENORES ===== */
   @media (max-width: 769px) {
     body {
       overflow: auto;
     }
   
     main::after {
-      background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
+      background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%);
       width: 100vw;
     }
   
@@ -81,13 +80,24 @@
     .botoes::after {
       display: block;
     }
+  
+    .video-container {
+      margin-top: 1rem;
+    }
+  
+    .instagram-media {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
   }
   
-  /* ===== CELULARES MÉDIOS ===== */
+  /* ===== CELULARES MÉDIOS (600px) ===== */
   @media (max-width: 600px) {
     .conteudo {
-      padding: 20px;
-      max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 95vw;
     }
   
     .conteudo .nome-personagem {
@@ -110,13 +120,13 @@
     }
   }
   
-  /* ===== CELULARES PEQUENOS ===== */
+  /* ===== CELULARES PEQUENOS (425px) ===== */
   @media (max-width: 425px) {
     .conteudo {
       padding: 20px;
-      top: 0;
       max-width: 95vw;
       text-align: left;
+      top: 0;
     }
   
     .conteudo .nome-personagem {
@@ -145,12 +155,41 @@
     }
   }
   
-  /* ===== INSTAGRAM EMBED CORRETO ===== */
+  /* ===== EMBED INSTAGRAM EM TELAS PEQUENAS ===== */
   @media (max-width: 768px) {
-    .conteudo blockquote.instagram-media {
-      max-width: 100% !important;
-      width: 100% !important;
-      margin: 0 auto !important;
+    .botoes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.30);
+      gap: 12px;
+      z-index: 9999;
+    }
+  
+    .botoes .botao {
+      width: 50px;
+      height: 50px;
+      flex: 0 0 auto;
+    }
+  
+    .botoes::after {
+      display: none;
+    }
+  
+    /* Compensar a altura da barra fixa para evitar sobreposição */
+    .personagens {
+      padding-top: 90px;
     }
   }
+  
+  
   
