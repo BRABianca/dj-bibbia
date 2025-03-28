@@ -1,12 +1,46 @@
-/* Tamanho de tela até 769px */
+@media (max-width: 900px) and (orientation: landscape) {
+    body {
+        overflow: auto;
+    }
+
+    .conteudo {
+        top: 2%;
+        min-height: 250px;
+        justify-content: end;
+        z-index: 2;
+    }
+
+    .conteudo .logo {
+        width: 130px;
+        height: 57px;
+    }
+
+    .conteudo .nome-personagem {
+        font-size: 30px;
+    }
+
+    .botoes {
+        z-index: 1;
+    }
+}
+
 @media (max-width: 769px) {
-    body{
+    body {
         overflow: auto;
     }
 
     main::after {
         background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
         width: 100vw;
+    }
+
+    video#background-video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     main .personagem .imagem {
@@ -19,7 +53,7 @@
         top: -20%;
         max-width: 100vw;
         padding: 30px;
-        z-index: 2; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
+        z-index: 2;
     }
 
     .conteudo .nome-personagem {
@@ -28,9 +62,6 @@
 
     .conteudo .descricao {
         max-width: 500px;
-    }
-    .conteudo .instagram-embed {
-        width: -80%;
     }
 
     .botoes {
@@ -44,7 +75,8 @@
         right: 0;
         padding: 30px;
         background-color: rgba(0, 0, 0, 0);
-        z-index: 1; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
+        z-index: 3;
+        gap: 16px;
     }
 
     .botoes::after {
@@ -57,12 +89,26 @@
     }
 }
 
-/* Tamanho de tela até 425px */
+@media (max-width: 600px) {
+    .conteudo {
+        padding: 20px;
+        max-width: 90vw;
+    }
+
+    .conteudo .descricao {
+        font-size: 14px;
+    }
+
+    .conteudo .nome-personagem {
+        font-size: 28px;
+    }
+}
+
 @media (max-width: 425px) {
-    body{
+    body {
         overflow: auto;
     }
-    
+
     main::after {
         background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
         width: 100vw;
@@ -79,7 +125,7 @@
 
     .conteudo {
         top: -25%;
-        z-index: 2; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
+        z-index: 2;
     }
 
     .conteudo .nome-personagem {
@@ -89,37 +135,13 @@
 
     .botoes {
         padding: 20px;
-        z-index: 1; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
+        gap: 12px;
+        z-index: 3;
+        flex-wrap: wrap;
     }
 
     .botoes .botao {
         max-width: 50px;
         max-height: 50px;
-    }
-}
-
-/* Tamanho de tela até 900px em orientação landscape */
-@media (max-width: 900px) and (orientation: landscape) {
-    body{
-        overflow: auto;
-    }
-    .conteudo {
-        top: 2%;
-        min-height: 250px;
-        justify-content: end;
-        z-index: 2; /* Adiciona z-index para garantir que o conteúdo fique abaixo dos botões */
-    }
-
-    .conteudo .logo {
-        width: 130px;
-        height: 57px;
-    }
-
-    .conteudo .nome-personagem {
-        font-size: 30px;
-    }
-
-    .botoes {
-        z-index: 1; /* Ajusta o z-index para garantir que os botões fiquem acima do conteúdo */
     }
 }
